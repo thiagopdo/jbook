@@ -5,8 +5,6 @@ import {
   DeleteCellAction,
   MoveCellAction,
   InsertCellAfterAction,
-  BundleStartAction,
-  BundleCompleteAction,
   Direction,
   Action,
 } from "../actions";
@@ -68,7 +66,7 @@ export const createBundle = (cellId: string, input: string) => {
       type: ActionType.BUNDLE_COMPLETE,
       payload: {
         cellId,
-        bundle: result
+        bundle: result,
       },
     });
   };
